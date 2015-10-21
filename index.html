@@ -1,20 +1,20 @@
 ---
 layout: workshop
 root: .
-venue: FIXME      # brief name of host site without address (e.g., "Euphoric State University")
-address: FIXME    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
-country: FIXME    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: FIXME   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: FIXME     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: FIXME  # human-readable date (e.g., "Feb 17-18, 2020")
-humantime: FIXME  # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME  # use YYYY-MM-DD format like "2015-01-01"
-enddate: FIXME    # use YYYY-MM-DD format like" 2015-01-02"
-instructor: FIXME # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: FIXME     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: FIXME    # contact email address for workshop organizer, such as "grace@hopper.org"
-etherpad:         # optional (insert the URL for your Etherpad if you're using one)
-eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+venue: "University of Oslo"
+address: "Science Library, Moltke Moes Road 35, 0851 Oslo"
+country: "no"
+language: "en"
+latlng: "59.940120, 10.723464"
+humandate: "Dec 2-3, 2015"
+humantime: "9:00 am - 4:30 pm"
+startdate: 2015-12-02
+enddate: 2015-12-03
+instructor: ["Arvind Sundaram", "Hugues Fontenelle", "Karin Lagesen", "Lex Nederbragt"]
+helper: ["TBD"]
+
+contact: "hugues.fontenelle@medisin.uio.no"
+etherpad: https://public.etherpad-mozilla.org/p/2015-12-02-Oslo
 ---
 <!--
   HEADER
@@ -77,9 +77,8 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
-  <strong>You don't need to have any previous knowledge of the tools that will
-    be presented at the workshop.</strong>
+  The course is aimed at graduate students and other researchers at the University of Oslo and Oslo University Hospital,
+  and tailored towards those with very little to no experience in the subjects taught.
 </p>
 
 <!--
@@ -129,8 +128,20 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   {% else %}
     <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
   {% endif %}
-  for more information.
+  for more information (Not for registration, see below).
 </p>
+
+<hr/>
+
+<!--
+  REGISTRATION
+-->
+<h2>Registration</h2>
+<div>
+    <p>
+        Registration is not open yet. The link will be available soon.
+    </p>
+</div>
 
 <hr/>
 
@@ -150,7 +161,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
       <tr> <td>10:30</td> <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>13:00</td>  <td>Version control with Git</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -158,10 +169,10 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>09:00</td>  <td>Building programs with Python</td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
+      <tr> <td>13:00</td>  <td>Python - continued</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -280,6 +291,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <li><a href="{{site.swc_githubio}}/git-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
+  <!--
   <div class="col-md-6">
     <h3>Managing Data with SQL</h3>
     <ul>
@@ -294,6 +306,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
     </ul>
   </div>
+  -->
 </div>
 
 <hr/>
@@ -457,7 +470,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
     optimized for writing code, with features like automatic
     color-coding of key words.  The default text editor on Mac OS X and
     Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
+    intuitive.  If you accidentally find yourself stuck in it, try
     typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
     exclamation mark), then hitting Return to return to the shell.
   </p>
@@ -467,7 +480,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <h4 id="editor-windows">Windows</h4>
       <p>
         nano is a basic editor and the default that instructors use in the workshop.
-        To install it, 
+        To install it,
         download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>
         and double click on the file to run it.
         <strong>This installer requires an active internet connection.</strong>
@@ -526,8 +539,9 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 
     <p>
       Regardless of how you choose to install it,
-      <strong>please make sure you install Python version 3.x</strong>
-      (e.g., 3.4 is fine).
+      <strong>please make sure you install Python version 2.x and not version 3.x</strong>
+      (e.g., 2.7 is fine but not 3.4).
+      Python 3 introduced changes that will break some of the code we teach during the workshop.
     </p>
 
     <p>
@@ -545,16 +559,18 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       <h4 id="python-windows">Windows</h4>
       <ol>
         <li>Open <a href="http://continuum.io/downloads">http://continuum.io/downloads</a> with your web browser.</li>
-        <li>Download the Python 3 installer for Windows.</li>
-        <li>Install Python 3 using all of the defaults for installation <em>except</em> make sure to check <strong>Make Anaconda the default Python</strong>.</li>
+        <li>Download the Python 2.7 installer for Windows.</li>
+        <li>Install Python 2.7 using all of the defaults for installation
+        <em>except</em> make sure to check
+        <strong>Make Anaconda the default Python</strong>.</li>
       </ol>
     </div>
     <div class="col-md-4">
       <h4 id="python-macosx">Mac OS X</h4>
       <ol>
         <li>Open <a href="http://continuum.io/downloads">http://continuum.io/downloads</a> with your web browser.</li>
-        <li>Download the Python 3 installer for OS X.</li>
-        <li>Install Python 3 using all of the defaults for installation.</li>
+        <li>Download the Python 2.7 installer for OS X.</li>
+        <li>Install Python 2.7 using all of the defaults for installation.</li>
       </ol>
     </div>
     <div class="col-md-4">
@@ -562,8 +578,8 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       </p>
       <ol>
         <li>Open <a href="http://continuum.io/downloads">http://continuum.io/downloads</a> with your web browser.</li>
-        <li>Download the Python 3 installer for Linux.</li>
-        <li>Install Python 3 using all of the defaults for installation.
+        <li>Download the Python 2.7 installer for Linux.</li>
+        <li>Install Python 2.7 using all of the defaults for installation.
         (Installation requires using the shell. If you aren't
         comfortable doing the installation yourself
         stop here and request help at the workshop.)</li>
@@ -593,8 +609,8 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   which has instructions on how to test that everything was installed correctly.
   </p>
 </div> <!-- End of 'Python' section. -->
-
-<div id="r"> <!-- Start of 'R' section. -->
+<!--
+<div id="r">
   <h3>R</h3>
 
   <p>
@@ -637,9 +653,10 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
       </p>
     </div>
   </div>
-</div> <!-- End of 'R' section. -->
-
-<div id="sql"> <!-- Start of 'SQLite' section. -->
+</div>
+-->
+<!--
+<div id="sql">
   <h3>SQLite</h3>
 
   <p>
@@ -674,8 +691,8 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   <p><strong>If you installed Anaconda, it also has a copy of SQLite
     <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
     Instructors will provide a workaround for it if needed.</strong></p>
-</div> <!-- End of 'SQLite' section. -->
-
+</div>
+-->
 <!--
   Uncomment this section if you are using our virtual machine.
 
